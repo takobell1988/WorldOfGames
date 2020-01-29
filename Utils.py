@@ -1,6 +1,4 @@
 import os
-import time
-import random
 
 
 def scores_file_name():
@@ -10,4 +8,10 @@ def scores_file_name():
         return scoresdata
 
 
-scores_file_name()
+def bad_return_code():
+    print('dont know yet')
+
+
+def screen_cleaner():
+    os.system('cls')
+
