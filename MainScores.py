@@ -1,25 +1,29 @@
 from flask import Flask
 app = Flask(__name__)
 
-
-def score_server():
-    file = open('Scores.txt', 'r')
-    score = file.read()
-    print(score)
-    return score
-
-
 @app.route('/')
-def run_page():
-    return '<html>' \
+def score_server():
+    try:
+        file = open('Scores1.txt', 'r')
+        score = file.read()
+        return '<html>' \
                '<head>' \
                '<title>Scores Game</title>' \
                '</head>' \
                '<body>' \
-                    '<h1>The score is <div id="score">' + score_server() + '</div></h1>' \
-               '</body>' \
-           '</html>'
+               '<h1>The score is <div id="score">' + score + '</div></h1>' \
+                '</body>' \
+                '</html>'
 
+    except BaseException as e:
+        return '<html>' \
+               '<head>' \
+               '<title>Scores Game</title>' \
+               '</head>' \
+               '<body>' \
+               '<h1>The score is <div id="score" style="color:red">{ERROR}</div></h1>' \
+                '</body>' \
+                '</html>'
 
 
 if __name__ == '__main__':
