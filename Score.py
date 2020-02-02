@@ -1,18 +1,3 @@
-# from Live import load_game
-#
-# gamevalues = load_game()
-# difficulty = gamevalues
-# print(difficulty)
-
-
-# def points_of_winning():
-#     gamevalue = load_game()
-#     difficulty = (gamevalue[1] * 3) + 5
-#     print(difficulty)
-#     return difficulty
-
-#
-# points_of_winning()
 
 def add_score(difficulty):
     try:
@@ -38,5 +23,3 @@ def add_score(difficulty):
 
 
 
-
-# add_score(difficulty)

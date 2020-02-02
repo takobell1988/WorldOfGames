@@ -1,5 +1,5 @@
 import time
-from MemoryGame import play_memory_game, is_list_equal
+from MemoryGame import play_memory_game
 from GuessGame import play_guess_game
 from CurrencyRouletteGame import *
 from Score import add_score
