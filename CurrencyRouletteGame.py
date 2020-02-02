@@ -36,10 +36,12 @@ def play_currency_game(difficulty):
         print('You are Wrong!')
         time.sleep(1)
         print('The EXACT value is ' + str("%.2f" % t) + ' NIS')
+        return False
     else:
         time.sleep(1)
         print('Your Right! :0')
         time.sleep(1)
         print('The EXACT value is ' + str("%.2f" % t) + ' NIS')
+        return True
 
 

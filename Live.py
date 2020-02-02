@@ -1,7 +1,8 @@
 import time
-from MemoryGame import play_memory_game
+from MemoryGame import play_memory_game, is_list_equal
 from GuessGame import play_guess_game
 from CurrencyRouletteGame import *
+from Score import add_score
 
 
 def welcome(input_name):
@@ -28,14 +29,23 @@ def load_game():
         difficulty = int(input("Choose game difficulty between 1 to 5: "))
     try:
         if chosen_game == 1:
-            play_memory_game(difficulty)
-            return chosen_game, difficulty
+            win = play_memory_game(difficulty)
+            if win == True:
+                add_score(difficulty)
+            else:
+                print("You did'nt win points on this round ")
         elif chosen_game == 2:
-            play_guess_game(difficulty)
-            return chosen_game, difficulty
+            win = play_guess_game(difficulty)
+            if win == True:
+                add_score(difficulty)
+            else:
+                print("You did'nt win points on this round ")
         elif chosen_game == 3:
-            play_currency_game(difficulty)
-            return chosen_game, difficulty
+            win = play_currency_game(difficulty)
+            if win == True:
+                add_score(difficulty)
+            else:
+                print("You did'nt win points on this round ")
 
     except BaseException as e:
         print('Error: Game not found')

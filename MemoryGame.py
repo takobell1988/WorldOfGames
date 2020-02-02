@@ -10,7 +10,6 @@ def generate_sequence(difficulty):
     print(random_list)
     time.sleep(0.7)
     os.system('cls')
-    # print("Try to remember the numbers!")
     time.sleep(3)
     return random_list
 
@@ -45,7 +44,11 @@ def play_memory_game(user_input):
     print("****** Welcome to the Memory Game! ******" + "\n")
     a = generate_sequence(user_input)
     b = get_list_from_user(user_input)
-    is_list_equal(a, b)
+    if is_list_equal(a, b) == True:
+        return True
+    else:
+        return False
+
 
 
 

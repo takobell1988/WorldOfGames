@@ -1,8 +1,8 @@
 import time
 import os
 from Live import load_game, welcome
-from MemoryGame import play_memory_game
-from GuessGame import play_guess_game
+# from MemoryGame import play_memory_game
+# from GuessGame import play_guess_game
 from CurrencyRouletteGame import *
 input_name = input('Enter yor name here: ')
 start_over = 0
