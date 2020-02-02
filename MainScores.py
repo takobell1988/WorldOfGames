@@ -1,6 +1,7 @@
 from flask import Flask
 app = Flask(__name__)
 
+
 @app.route('/')
 def score_server():
     try:
@@ -12,8 +13,8 @@ def score_server():
                '</head>' \
                '<body>' \
                '<h1>The score is <div id="score">' + score + '</div></h1>' \
-                '</body>' \
-                '</html>'
+            '</body>' \
+            '</html>'
 
     except BaseException as e:
         return '<html>' \
