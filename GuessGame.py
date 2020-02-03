@@ -32,7 +32,10 @@ def play_guess_game(user_input):
     print("****** Welcome to the Guess Game! ******" + "\n")
     generate_number(user_input)
     get_guess_from_user(user_input)
-    compare_results()
+    if compare_results() == True:
+        return True
+    else:
+        return False
 
 
 
