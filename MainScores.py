@@ -5,14 +5,17 @@ app = Flask(__name__)
 @app.route('/')
 def score_server():
     try:
-        file = open('Scores1.txt', 'r')
+        file = open('Scores.txt', 'r')
         score = file.read()
         return '<html>' \
                '<head>' \
                '<title>Scores Game</title>' \
                '</head>' \
                '<body>' \
-               '<h1>The score is <div id="score">' + score + '</div></h1>' \
+               '<h1>' \
+               '<div style="padding: 10px; display:inline-block">The score is :</div>' \
+               '<div style="padding: 5px; display:inline-block" id="score">' + score + '</div>' \
+                '</h1>' \
             '</body>' \
             '</html>'
 
@@ -22,7 +25,10 @@ def score_server():
                '<title>Scores Game</title>' \
                '</head>' \
                '<body>' \
-               '<h1>The score is <div id="score" style="color:red">{ERROR}</div></h1>' \
+               '<h1>' \
+               '<div style="padding: 10px; display:inline-block"> The score is </div>' \
+               '<div style="padding: 10px; display:inline-block; color:red" id="score">{ERROR}</div>' \
+               '</h1>' \
                 '</body>' \
                 '</html>'
 
