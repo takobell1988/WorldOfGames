@@ -2,10 +2,10 @@ import os
 
 
 def scores_file_name():
-    with open('Scores.txt', 'r') as scores:
-        scoresdata = scores.read()
-        print(scoresdata)
-        return scoresdata
+    file = open('Scores.txt', 'r')
+    scoresdata = file.read()
+    print(scoresdata)
+    return scoresdata
 
 
 def bad_return_code():
