@@ -12,7 +12,7 @@ def test_scores_service():
         return True
         Chrome_driver.close()
     else:
-        print('test not pass!')
+        print('test not pass!, bigger than 1000 or smaller then 1')
         return False
         Chrome_driver.close()
 
