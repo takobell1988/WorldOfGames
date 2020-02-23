@@ -1,6 +1,10 @@
-FROM python:3
-ADD MainScores.py /
-ADD Scores.txt /
+FROM python:3-alpine
+WORKDIR /app
+
+COPY . /app
+
 EXPOSE 8777
-RUN pip install -r requirements.txt
-CMD [ "python", "./MainScores.py" ]
+
+RUN touch /app/Scores.txt
+RUN pip install -r /app/requirements.txt
+CMD ["python","/app/MainScores.py"]
