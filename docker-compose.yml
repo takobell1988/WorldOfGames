@@ -1,9 +1,8 @@
 version: '3'
 services:
-  web:
+  wog:
     build: .
     ports:
-      - "8777:8777"
+      - "8777:80"
     image: 'takobell1988/WOG4'
-  redis:
-    image: "redis:alpine"
+    restart: always
