@@ -1,8 +1,8 @@
 version: '3'
 services:
   wog:
+    image: 'takobell1988/WOG4'
     build: .
     ports:
       - "8777:80"
-    image: 'takobell1988/WOG4'
     restart: always
