@@ -1,4 +1,4 @@
 CurrencyConverter==0.13.11
 selenium==3.141.0
 requests==2.22.0
-flask==1.1.1
+flask==2.3.2
